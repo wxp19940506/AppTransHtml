@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function showSelf() {
+            alert("我来自网页")
+        }
+ function showAndroid(str) {
+            alert(str)
+        }
+        //调用android程序
+         function callAndroid() {
+   Android.show('来自网页的我');
+        }
+    </script>
+
+</head>
+<body>
+
+<input type="button" value="我是网页上按钮"  onclick="showSelf()">
+
+<input type="button" value="调用原生程序"  onclick="callAndroid()">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function denglu() {
+            var name=document.getElementById("name");
+            var pwd=document.getElementById("pwd");
+           if( Android.showname(name.value,pwd.value)){
+            alert("登录成功");
+           }else{
+              alert("登录失败");
+           }
+        }
+
+    </script>
+</head>
+<body>
+<table border="2px" style="border: 2px solid red" width="600px">
+    <tr>
+        <td>登录名：</td>
+        <td><input id="name" type="text" style="width: 96%" ></td>
+    </tr>
+    <tr>
+        <td>登录密码：</td>
+        <td><input id="pwd" type="password" style="width: 96%" ></td>
+    </tr>
+</table>
+<input  type="button" value="登录"  onclick="denglu()">
+
+</body>
+</html>
