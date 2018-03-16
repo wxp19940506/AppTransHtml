@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button bt1=(Button)findViewById(R.id.bt1);
-        Button bt2=(Button)findViewById(R.id.bt2);
-        wv=(WebView)findViewById(R.id.wb);
-        WebSettings ws=wv.getSettings();
+        Button bt1 = (Button) findViewById(R.id.bt1);
+        Button bt2 = (Button) findViewById(R.id.bt2);
+        wv = (WebView) findViewById(R.id.wb);
+        WebSettings ws = wv.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.setSupportZoom(true);
         wv.setWebViewClient(new WebViewClient());
@@ -34,20 +34,20 @@ public class MainActivity extends AppCompatActivity {
         参数2：java类别名
 
  */
-        wv.addJavascriptInterface(new AsForjs(this),"Android");
+        wv.addJavascriptInterface(new AsForjs(this), "Android");
 
-        final String str="传字符串";
+        final String str = "这是一个来自android的数据";
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                wv.loadUrl("javascript:showAndroid('"+str+"');");
+                wv.loadUrl("javascript:showAndroid('" + str + "');");
             }
         });
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
             }
         });

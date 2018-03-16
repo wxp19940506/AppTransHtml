@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="./jquery-1.11.1.min.js"></script>
     <script>
         function showSelf() {
             alert("我来自网页")
         }
- function showAndroid(str) {
-            alert(str)
+        function showAndroid(str) {
+            alert(str);
+            $("#text").text(str);
+            alert(str+"111");
         }
         //调用android程序
          function callAndroid() {
-   Android.show('来自网页的我');
+             <!--Android.show('来自网页的我');-->
+             Android.show();
         }
+<!--$(function(){-->
+    <!--alert('Hi,I am a alert!');-->
+                <!--$("div").text("abbcd");-->
+
+
+<!--});-->
+
     </script>
 
 </head>
 <body>
 
-<input type="button" value="我是网页上按钮"  onclick="showSelf()">
+<input type="button" value="我是网页上按钮" onclick="showSelf()">
 
-<input type="button" value="调用原生程序"  onclick="callAndroid()">
+<input type="button" value="调用原生程序" onclick="callAndroid()">
+<div id="text"></div>
 </body>
 </html>
